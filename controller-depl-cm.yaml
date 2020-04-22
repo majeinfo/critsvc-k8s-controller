@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: linux-mag
+  name: service-watcher
+spec:
+  selector:
+    matchLabels:
+      app: service-watcher
+  template:
+    metadata:
+      labels:
+        app: service-watcher
+    spec:
+      serviceAccount: service-watcher
+      containers:
+      - name: service-watcher
+        image: majetraining/service-watcher-controller:v1
+        envFrom:
+        - configMapRef:
+            name: service-watcher-env-config
+

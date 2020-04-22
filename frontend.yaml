@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: web
+  labels:
+    role: frontend
+    version: v1
+  namespace: linux-mag
+spec:
+  containers:
+    - name: app
+      image: nginx

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  namespace: linux-mag
+  name: service-watcher-env-config
+data:
+  LOG_LEVEL: INFO
+  NAMESPACES: default

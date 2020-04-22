@@ -1,0 +1,5 @@
+FROM python:3.8-slim
+ADD requirements.txt /
+RUN pip install -r /requirements.txt
+ADD watch_service_pods_v5.py /
+ENTRYPOINT [ "python", "/watch_service_pods_v5.py" ]

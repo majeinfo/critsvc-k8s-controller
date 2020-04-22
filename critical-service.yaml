@@ -1,0 +1,9 @@
+apiVersion: mycrd.com/v1
+kind: CriticalService
+metadata:
+  name: frontend
+spec:
+  namespace: default
+  matchLabels:
+    - key: role
+      value: frontend
